@@ -26,52 +26,78 @@ import java.util.Map;
  * Describe the MIME content type of a resource.
  */
 public class ContentType {
-    private final String mediaType;
-    private final String subType;
-    private final Map<String, String> parameters;
+	private  String mediaType;
+	private  String subType;
+	private  Map<String, String> parameters;
 
-    /**
-     * Constructs content types, 
-     * performing an necessary conversions.
-     * @param mediaType not null
-     * @param subType not null
-     * @param parameters not null
-     */
-    public ContentType(final String mediaType, final String subType, final Map<String, String> parameters) {
-        super();
-        this.mediaType = mediaType.toLowerCase(Locale.US);
-        this.subType = subType.toLowerCase(Locale.US);
-        this.parameters = new HashMap<String, String>(parameters.size());
-        for (Map.Entry<String, String> entry : parameters.entrySet()) {
-            this.parameters.put(entry.getKey().toString().toLowerCase(Locale.US), entry.getValue());
-        }
-    }
+	/**
+	 * Constructs content types, performing an necessary conversions.
+	 * 
+	 * @param mediaType
+	 *            not null
+	 * @param subType
+	 *            not null
+	 * @param parameters
+	 *            not null
+	 */
+	public ContentType(final String mediaType, final String subType,
+			final Map<String, String> parameters) {
+		super();
+		this.mediaType = mediaType.toLowerCase(Locale.US);
+		this.subType = subType.toLowerCase(Locale.US);
+		this.parameters = new HashMap<String, String>(parameters.size());
+		for (Map.Entry<String, String> entry : parameters.entrySet()) {
+			this.parameters.put(entry.getKey().toString()
+					.toLowerCase(Locale.US), entry.getValue());
+		}
+	}
 
-    /**
-     * Gets the media type,
-     * normalised to lower case.
-     * @return media type, not null
-     */
-    public String getMediaType() {
-        return mediaType;
-    }
-    
-    /**
-     * Gets the media sub type
-     * normalised to lower case
-     * @return sub type, not null
-     */
-    public String getSubType() {
-        return subType;
-    }
-    
-    /**
-     * Gets an immutable map
-     * containing all content type parameters 
-     * with keys normalised to lower case.
-     * @return not null
-     */
-    public Map<String, String> getParameters() {
-        return parameters;
-    }
+	/**
+	 * Gets the media type, normalised to lower case.
+	 * 
+	 * @return media type, not null
+	 */
+	public String getMediaType() {
+		return mediaType;
+	}
+
+	/**
+	 * Gets the media sub type normalised to lower case
+	 * 
+	 * @return sub type, not null
+	 */
+	public String getSubType() {
+		return subType;
+	}
+
+	/**
+	 * Gets an immutable map containing all content type parameters with keys
+	 * normalised to lower case.
+	 * 
+	 * @return not null
+	 */
+	public Map<String, String> getParameters() {
+		return parameters;
+	}
+
+	/**
+	 * @param mediaType the mediaType to set
+	 */
+	public void setMediaType(String mediaType) {
+		this.mediaType = mediaType;
+	}
+
+	/**
+	 * @param subType the subType to set
+	 */
+	public void setSubType(String subType) {
+		this.subType = subType;
+	}
+
+	/**
+	 * @param parameters the parameters to set
+	 */
+	public void setParameters(Map<String, String> parameters) {
+		this.parameters = parameters;
+	}
 }
