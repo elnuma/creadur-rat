@@ -1,0 +1,12 @@
+<metadata>
+  <groupId>org.apache.commons</groupId>
+  <artifactId>commons-parent</artifactId>
+  <versioning>
+    <versions>
+      <version>24</version>
+      <version>11</version>
+      <version>5</version>
+    </versions>
+    <lastUpdated>20130706162952</lastUpdated>
+  </versioning>
+</metadata>

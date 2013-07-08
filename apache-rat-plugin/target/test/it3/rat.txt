@@ -1,0 +1,51 @@
+
+*****************************************************
+Summary
+-------
+Generated at: 2013-07-06T18:29:51+02:00
+Notes: 0
+Binaries: 0
+Archives: 0
+Standards: 2
+
+Apache Licensed: 1
+Generated Documents: 0
+
+JavaDocs are generated and so license header is optional
+Generated files do not required license headers
+
+1 Unknown Licenses
+
+*******************************
+
+Unapproved licenses:
+
+  /Volumes/WOXTER/git/Apache/apache-rat-plugin/target/it-source/it3/src.apt
+
+*******************************
+
+Archives:
+
+*****************************************************
+  Files with Apache License headers will be marked AL
+  Binary files (which do not require AL headers) will be marked B
+  Compressed archives will be marked A
+  Notices, licenses etc will be marked N
+  AL    /Volumes/WOXTER/git/Apache/apache-rat-plugin/target/it-source/it3/pom.xml
+ !????? /Volumes/WOXTER/git/Apache/apache-rat-plugin/target/it-source/it3/src.apt
+ 
+*****************************************************
+ Printing headers for files without AL header...
+ 
+ 
+=======================================================================
+==/Volumes/WOXTER/git/Apache/apache-rat-plugin/target/it-source/it3/src.apt
+=======================================================================
+    --------------
+    Some text file
+    --------------
+
+Some text file
+
+  This is a text file, which intentionally has no Apache License Header.
+  The Rat plugin should detect it.
