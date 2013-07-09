@@ -294,14 +294,14 @@ public class MetaData {
 		/**
 		 * @param name the name to set
 		 */
-		public void setName(String name) {
+		public void setName(final String name) {
 			this.name = name;
 		}
 
 		/**
 		 * @param value the value to set
 		 */
-		public void setValue(String value) {
+		public void setValue(final String value) {
 			this.value = value;
 		}
 	}

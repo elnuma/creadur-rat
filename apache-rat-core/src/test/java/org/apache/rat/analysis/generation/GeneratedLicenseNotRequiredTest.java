@@ -39,25 +39,25 @@ public class GeneratedLicenseNotRequiredTest {
 
 	@Before
 	public void setUp() throws Exception {
-		Pattern[] patterns = { Pattern.compile(".*Generated") };
+		final Pattern[] patterns = { Pattern.compile(".*Generated") };
 		license = new GeneratedLicenseNotRequired(patterns);
 	}
 
 	@Test
-	public void matchFindPatternLicense() {
+	public void testMatchPatternLicense() {
 		final Document subject = new MockLocation("subject");
 		assertTrue("Matches regex", license.match(subject, "This is Generated"));
 	}
 	
 	@Test
-	public void matchNotFindPatternLicense() {
+	public void testMatchNonPatternLicense() {
 		final Document subject = new MockLocation("subject");
 		assertFalse("Does not match regex",
 				license.match(subject, "Not at all"));
 	}
 	
 	@Test
-	public void matchFindDefaultPhrasesLicense() {
+	public void testMatchDefaultPhrasesLicense() {
 		license = new GeneratedLicenseNotRequired();
 		final Document subject = new MockLocation("subject");
 		assertTrue("Does not match regex",

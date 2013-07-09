@@ -33,10 +33,17 @@ public class MockLocation implements Document {
     private MetaData metaData = new MetaData();
     
     /**
+	 * 
+	 */
+	public MockLocation() {
+		super();
+	}
+
+	/**
      * 
      * @param name
      */
-    public MockLocation(String name) {
+    public MockLocation(final String name) {
         this(name, "url");
     }
 
@@ -45,7 +52,7 @@ public class MockLocation implements Document {
      * @param name
      * @param url
      */
-    public MockLocation(String name, String url) {
+    public MockLocation(final String name, final String url) {
         super();
         this.name = name;
         this.url = url;
@@ -61,7 +68,7 @@ public class MockLocation implements Document {
     /**
 	 * @param name the name to set
 	 */
-	public void setName(String name) {
+	public void setName(final String name) {
 		this.name = name;
 	}
 
@@ -83,7 +90,7 @@ public class MockLocation implements Document {
 	/**
 	 * @param url the url to set
 	 */
-	public void setUrl(String url) {
+	public void setUrl(final String url) {
 		this.url = url;
 	}
 
@@ -97,7 +104,7 @@ public class MockLocation implements Document {
 	/**
 	 * @param metaData the metaData to set
 	 */
-	public void setMetaData(MetaData metaData) {
+	public void setMetaData(final MetaData metaData) {
 		this.metaData = metaData;
 	}
 }

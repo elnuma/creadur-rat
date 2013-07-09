@@ -83,21 +83,21 @@ public class ContentType {
 	/**
 	 * @param mediaType the mediaType to set
 	 */
-	public void setMediaType(String mediaType) {
+	public void setMediaType(final String mediaType) {
 		this.mediaType = mediaType;
 	}
 
 	/**
 	 * @param subType the subType to set
 	 */
-	public void setSubType(String subType) {
+	public void setSubType(final String subType) {
 		this.subType = subType;
 	}
 
 	/**
 	 * @param parameters the parameters to set
 	 */
-	public void setParameters(Map<String, String> parameters) {
+	public void setParameters(final Map<String, String> parameters) {
 		this.parameters = parameters;
 	}
 }
