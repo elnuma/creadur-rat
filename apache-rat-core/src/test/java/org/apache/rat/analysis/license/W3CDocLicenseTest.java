@@ -18,15 +18,36 @@
  */
 package org.apache.rat.analysis.license;
 
-import static org.apache.rat.api.domain.RatLicenseFamily.W3C;
+import static org.hamcrest.CoreMatchers.is;
+import static org.junit.Assert.assertThat;
 
-public class W3CLicense extends SimplePatternBasedLicense {
+import org.junit.Before;
+import org.junit.Test;
 
-    private static final String COPYRIGHT_URL =
-            "http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231";
+public class W3CDocLicenseTest {
 
-    public W3CLicense() {
-        super(W3C.licenseFamily(), new String[] { COPYRIGHT_URL });
+    W3CDocLicense license;
 
+    @Before
+    public void setUp() throws Exception {
+        this.license = new W3CDocLicense();
+    }
+
+    @Test
+    public void testNotes() {
+        assertThat(
+                this.license.getNotes(),
+                is("Note that W3CD does not allow modifications. See http://www.w3.org/Consortium/Legal/2002/copyright-documents-20021231."));
+    }
+
+    @Test
+    public void testCategory() {
+        assertThat(this.license.getLicenseFamilyCategory(), is("W3CD "));
+    }
+
+    @Test
+    public void testName() {
+        assertThat(this.license.getLicenseFamilyName(),
+                is("W3C Document Copyright"));
     }
 }
